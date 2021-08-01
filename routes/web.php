@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,17 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+Route::get('/', [FrontendController::class, 'index'])->name('homepage');
 
-Route::get('about-us', function(){
-    return view('about');
-})->name('about');
+Route::get('about-us', [FrontendController::class, 'about'])->name('about');
 
-Route::get('contact-us', function(){
-    return view('contact');
-})->name('contact');
+Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
 
 Route::get('news/{category}/{id}', function($category, $id){
     return $category.'/'.$id;
