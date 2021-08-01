@@ -24,3 +24,7 @@ Route::get('about-us', function(){
 Route::get('contact-us', function(){
     return view('contact');
 })->name('contact');
+
+Route::get('news/{category}/{id}', function($category, $id){
+    return $category.'/'.$id;
+});
