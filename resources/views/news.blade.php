@@ -1,5 +1,11 @@
 @extends('master')
-
+@push('css')
+    <style>
+        body{
+            background-color:#F5F5F5;
+        }
+    </style>
+@endpush
 @section('title', $title)
 
 @section('seo_description', $description)
@@ -20,3 +26,7 @@
     </div>
 </div>
 @endsection
+
+@push('js')
+
+@endpush
