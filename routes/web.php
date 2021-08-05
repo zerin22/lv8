@@ -21,3 +21,12 @@ Route::get('about-us', [FrontendController::class, 'about'])->name('about');
 Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
 
 Route::get('news/{category}/{id}/{title}/{description}', [FrontendController::class, 'news'])->name('news');
+
+//POST CRUD
+// index
+// create
+// store
+// show
+// edit
+// update
+// delete
