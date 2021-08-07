@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,5 @@ Route::get('news/{category}/{id}/{title}/{description}', [FrontendController::cl
 // edit
 // update
 // delete
+
+Route::get('post', [PostController::class, 'index'])->name('postIndex');
