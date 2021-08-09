@@ -23,8 +23,12 @@
                             <td>{{ $post->status }}</td>
                         </tr>
                     @endforeach
-
                 </table>
+
+                {{ $posts->links() }}
+
+                {{-- {{ $posts->onEachSide(2)->links() }} --}}
+
             </div>
         </div>
     </div>
