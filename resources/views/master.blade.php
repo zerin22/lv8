@@ -7,6 +7,8 @@
     <meta name="description" content="@yield('seo_description')"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/DataTables/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/DataTables/dataTables.bootstrap4.min.css') }}">
     @stack('css')
     <title>@yield('title')</title>
   </head>
@@ -23,6 +25,7 @@
     <script src="{{ asset('dist/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('dist/js/popper.min.js') }}"></script>
     <script src="{{ asset('dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('dist/DataTables/datatables.min.js') }}"></script>
     @stack('js')
   </body>
 </html>
