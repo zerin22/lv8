@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::get('/', [FrontendController::class, 'index'])->name('homepage');
 
@@ -42,4 +47,4 @@ Route::get('news/{category}/{id}/{title}/{description}', [FrontendController::cl
 // Route::delete('post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
 
 //RESOURCE ROUTE
-Route::resource('post', PostController::class);
+Route::resource('post', PostController::class)->middleware('auth');
